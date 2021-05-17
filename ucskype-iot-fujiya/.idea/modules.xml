@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ucskype-iot.iml" filepath="$PROJECT_DIR$/ucskype-iot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucskype-iot-agreement-fujiya/ucskype-iot-agreement-fujiya.iml" filepath="$PROJECT_DIR$/ucskype-iot-agreement-fujiya/ucskype-iot-agreement-fujiya.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucskype-iot-api/ucskype-iot-api.iml" filepath="$PROJECT_DIR$/ucskype-iot-api/ucskype-iot-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucskype-iot-base/ucskype-iot-base.iml" filepath="$PROJECT_DIR$/ucskype-iot-base/ucskype-iot-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucskype-iot-redis/ucskype-iot-redis.iml" filepath="$PROJECT_DIR$/ucskype-iot-redis/ucskype-iot-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucskype-iot-service/ucskype-iot-service.iml" filepath="$PROJECT_DIR$/ucskype-iot-service/ucskype-iot-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucskype-iot-transmit-netty/ucskype-iot-transmit-netty.iml" filepath="$PROJECT_DIR$/ucskype-iot-transmit-netty/ucskype-iot-transmit-netty.iml" />
+    </modules>
+  </component>
+</project>

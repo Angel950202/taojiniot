@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ucskype-iot-api:war">
+    <output-path>$PROJECT_DIR$/ucskype-iot-api/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ucskype-iot-api</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ucskype-iot-api.war">
+      <element id="artifact" artifact-name="ucskype-iot-api:war exploded" />
+    </root>
+  </artifact>
+</component>

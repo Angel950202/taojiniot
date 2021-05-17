@@ -1,0 +1,81 @@
+package com.taojin.iot.api.equipment.controller;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
+import org.apache.commons.lang.StringUtils;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.taojin.iot.BaseController;
+import com.taojin.iot.service.equipment.entity.EquipmentType;
+import com.taojin.iot.service.equipment.service.EquipmentTypeService;
+
+/**
+ * Controller-设备类型 iot物联网平台
+ * ============================================================================
+ * 版权所有 2013-2016 无锡淘金网络科技有限公司，并保留所有权利。
+ * ----------------------------------------------------------------------------
+ * 提示：在未取得UcSkype商业授权之前，您不能将本软件应用于商业用途，否则UcSkype将保留追究的权力。
+ * ----------------------------------------------------------------------------
+ * 官方网站：http://www.ucskype.com/
+ * ----------------------------------------------------------------------------
+ * 下午9:27:48 author 王杰
+ * ============================================================================
+ */
+@Controller("internalEquipmentTypeController")
+@RequestMapping("/internal/equipment/equipmentType")
+public class EquipmentTypeController extends BaseController {
+	@Resource(name = "equipmentTypeServiceImpl")
+	private EquipmentTypeService equipmentTypeService;
+
+	/**
+	 * 获取设备类别
+	 * 
+	 * @param requestParams
+	 *            requestParams={"action":"equipmentType","method":"list",
+	 *            "session":{"sessionId":"会话ID","equipmentTypeId":"频道ID"}}
+	 * @return
+	 */
+	@RequestMapping(value = "/list", produces = "application/josn; charset=utf-8")
+	@ResponseBody
+	public String list(String requestParams) {
+		if (StringUtils.isBlank(requestParams)) {
+			return errorMsg("-31", "获取默认参数失败");
+		}
+		JSONObject node = new JSONObject();
+		JSONObject session = new JSONObject();
+		try {
+			node = JSONObject.fromObject(requestParams);
+			session = node.getJSONObject("session");
+		} catch (Exception e) {
+			return successMsg("-1", "参数解析错误!");
+		}
+
+		if (super.getSession(session) == null) {
+			return errorMsg("302", "会话超时,请重 新登录!");
+		}
+
+		List<EquipmentType> equipmentTypes = equipmentTypeService.findAll();
+
+		JSONObject jsonReturn = new JSONObject();
+		jsonReturn.put("errcode", "0");
+		jsonReturn.put("errmsg", "拉取成功");
+		JSONArray jsonArray = new JSONArray();
+		for (int i = 0; i < equipmentTypes.size(); i++) {
+			JSONObject json = new JSONObject();
+			json.put("id", equipmentTypes.get(i).getId());
+			json.put("name", equipmentTypes.get(i).getName());
+			json.put("icopath", equipmentTypes.get(i).getIcopath());
+			jsonArray.add(json);
+		}
+		jsonReturn.put("values", jsonArray);
+		return jsonReturn.toString();
+	}
+
+}

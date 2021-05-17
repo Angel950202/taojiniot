@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ucskype-iot-redis" />
+        <module name="ucskype-iot-service" />
+        <module name="ucskype-iot-base" />
+        <module name="ucskype-iot-transmit-netty" />
+        <module name="ucskype-iot-api" />
+        <module name="ucskype-iot-agreement-fujiya" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ucskype-iot" target="1.7" />
+      <module name="ucskype-iot-agreement-fujiya" target="1.7" />
+      <module name="ucskype-iot-api" target="1.7" />
+      <module name="ucskype-iot-base" target="1.7" />
+      <module name="ucskype-iot-redis" target="1.7" />
+      <module name="ucskype-iot-service" target="1.7" />
+      <module name="ucskype-iot-transmit-netty" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

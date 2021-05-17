@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.taojin.iot</groupId>
+		<artifactId>ucskype-iot</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>com.taojin.iot.api</groupId>
+	<artifactId>ucskype-iot-api</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ucskype-iot-api</name>
+	<properties>
+		<weixin-java-mp.version>3.4.0</weixin-java-mp.version>
+		<org.springframework.version>3.2.2</org.springframework.version>
+		<hibernate.version>3.6.10</hibernate.version>
+		<taojin.iot.version>1.0.0</taojin.iot.version>
+	</properties>
+	<dependencies>
+	      <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-mp</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+	
+		<!-- taojin model -->
+		<dependency>
+			<groupId>com.taojin.iot</groupId>
+			<artifactId>ucskype-iot-service</artifactId>
+			<version>${taojin.iot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.taojin.iot</groupId>
+			<artifactId>ucskype-iot-transmit-netty</artifactId>
+			<version>${taojin.iot.version}</version>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<finalName>ucskype-iot-api</finalName>
+	</build>
+</project>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ucskype-iot-api">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-jee/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="ucskype-iot-agreement-fujiya-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ucskype-iot-agreement-fujiya/ucskype-iot-agreement-fujiya">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ucskype-iot-base-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ucskype-iot-base/ucskype-iot-base">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ucskype-iot-service-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ucskype-iot-service/ucskype-iot-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ucskype-iot-transmit-netty-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ucskype-iot-transmit-netty/ucskype-iot-transmit-netty">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ucskype-iot-redis.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ucskype-iot-redis/ucskype-iot-redis">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/ucskype-iot-api/target/classes"/>
+        <property name="context-root" value="ucskype-iot-dtuserver-fujiya"/>
+    </wb-module>
+</project-modules>

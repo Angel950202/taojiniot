@@ -1,0 +1,114 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+		<groupId>com.taojin.iot</groupId>
+		<artifactId>ucskype-iot</artifactId>
+		<version>1.0.0</version>
+	</parent>
+  <groupId>com.taojin.iot.dtuserver</groupId>
+  <artifactId>ucskype-iot-dtuserver-fujiya</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>ucskype-iot-dtuserver-fujiya</name>
+  <properties>
+        <org.springframework.version>3.2.2</org.springframework.version>
+        <hibernate.version>3.6.10</hibernate.version>
+         <taojin.iot.version>1.0.0</taojin.iot.version>
+    </properties>
+	<dependencies>
+		<!-- taojin model -->
+		<dependency>
+			<groupId>com.taojin.iot</groupId>
+			<artifactId>ucskype-iot-agreement-fujiya</artifactId>
+			<version>${taojin.iot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.taojin.iot</groupId>
+			<artifactId>ucskype-iot-service</artifactId>
+			<version>${taojin.iot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.taojin.iot</groupId>
+			<artifactId>ucskype-iot-transmit-netty</artifactId>
+			<version>${taojin.iot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.taojin.iot</groupId>
+			<artifactId>ucskype-iot-redis</artifactId>
+			<version>${taojin.iot.version}</version>
+		</dependency>
+	
+		<!-- lucene start -->
+		<dependency>
+			<groupId>com.taojin.lucene</groupId>
+			<artifactId>lucene</artifactId>
+			<version>3.5.0</version>
+		</dependency>
+		<!-- lucene end -->
+		<!-- jcaptcha start -->
+		<dependency>
+			<groupId>com.taojin.jcaptcha</groupId>
+			<artifactId>jcaptcha</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- jcaptcha end -->
+		<!-- jackson start -->
+		<dependency>
+			<groupId>com.taojin.jackson</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.taojin.jackson</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.taojin.jackson</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.1.4</version>
+		</dependency>
+
+		<!-- json start -->
+		<dependency>
+			<groupId>com.taojin.json</groupId>
+			<artifactId>json-lib-2.3-jdk15</artifactId>
+			<version>2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.taojin.json</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+		<!-- json end -->
+
+		<!-- httpclient start -->
+		<dependency>
+			<groupId>com.taojin.httpclient</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.taojin.httpclient</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>4.2.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.taojin.plantj</groupId>
+			<artifactId>pjl-comp-filter</artifactId>
+			<version>1.7</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>compile</scope>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<finalName>ucskype-iot-dtuserver-fujiya</finalName>
+	</build>
+</project>

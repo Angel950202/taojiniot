@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.taojin.iot</groupId>
+		<artifactId>ucskype-iot</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>ucskype-iot-service</artifactId>
+	<packaging>jar</packaging>
+	<name>ucskype-iot-service</name>
+	<description>物联平台-业务逻辑</description>
+	<properties>
+		<taojin.iot.version>1.0.0</taojin.iot.version>
+	</properties>
+	<dependencies>
+		<!-- taojin model -->
+		<dependency>
+			<groupId>com.taojin.iot</groupId>
+			<artifactId>ucskype-iot-base</artifactId>
+			<version>${taojin.iot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.1.8</version>
+		</dependency>
+		<dependency>
+			<groupId>com.taojin.iot</groupId>
+			<artifactId>ucskype-iot-agreement-fujiya</artifactId>
+			<version>${taojin.iot.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+	</build>
+</project>
